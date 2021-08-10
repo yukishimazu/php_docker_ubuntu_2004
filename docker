@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ "$1" = "build" ]; then
+  echo "build!"
+  docker-compose build
+elif [ "$1" = "rebuild" ]; then
+  echo "rebuild!"
+  docker-compose build --force-rm --no-cache
+elif [ "$1" = "up" ]; then
+  echo "up!"
+  docker-compose up
+elif [ "$1" = "upd" ]; then
+  echo "upd!"
+  docker-compose up -d
+elif [ "$1" = "stop" ]; then
+  echo "stop!"
+  docker-compose stop
+elif [ "$1" = "exec" ]; then
+  echo "exec!"
+  docker-compose exec $2 bash
+elif [ "$1" = "ex" ]; then
+  echo "exec!"
+  docker-compose exec $2 bash
+else
+  echo "Invalid parameter!" 1>&2
+  exit 1
+fi
+
+exit 0
+
+
