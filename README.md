@@ -1,6 +1,6 @@
-# php_docker_ubuntu_2004
+# php_mysql_docker_ubuntu_2004
 
-Docker image for PHP. Built with Ubuntu 20.04 packages
+Docker image for PHP & MySQL. Built with Ubuntu 20.04 packages
 
 ### build
 ```
